@@ -1,8 +1,11 @@
+import java.net.URI
+
 pluginManagement {
     repositories {
         google()
         mavenCentral()
         gradlePluginPortal()
+        maven { setUrl("https://jitpack.io") }
     }
 }
 dependencyResolutionManagement {
@@ -10,8 +13,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { setUrl("https://jitpack.io") }
     }
 }
 
 rootProject.name = "FindMySocial"
-include(":app")
+include(":app",":ccp")

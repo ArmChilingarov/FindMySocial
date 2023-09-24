@@ -21,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.findmysocial.ui.components.SelectCountryWithCountryCode
 import com.example.findmysocial.ui.components.TelegramButton
 import com.example.findmysocial.ui.components.ViberButton
 import com.example.findmysocial.ui.components.WhatsappButton
@@ -56,12 +57,7 @@ fun MainScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        TextField(
-            value = text,
-            onValueChange = {
-                viewModel.updateText(it)
-            }
-        )
+        SelectCountryWithCountryCode()
         Spacer(modifier = Modifier.height(16.dp))
         WhatsappButton()
         ViberButton()
